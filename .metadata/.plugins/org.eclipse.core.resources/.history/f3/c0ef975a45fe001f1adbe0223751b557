@@ -1,0 +1,67 @@
+
+
+class Employeee{
+	int eid;
+	String ename;
+	int eage;
+	public int getEid() {
+		return eid;
+	}
+	public void setEid(int eid) {
+		this.eid = eid;
+	}
+	public Employeee(int eid, String ename, int eage) {
+		super();
+		this.eid = eid;
+		this.ename = ename;
+		this.eage = eage;
+	}
+	@Override
+	public String toString() {
+		return "Employeee [eid=" + eid + ", ename=" + ename + ", eage=" + eage + "]";
+	}
+	public String getEname() {
+		return ename;
+	}
+	public void setEname(String ename) {
+		this.ename = ename;
+	}
+	public int getEage() {
+		return eage;
+	}
+	public void setEage(int eage) {
+		this.eage = eage;
+	}
+}
+
+public class Q3 {
+	String name;
+	int age;
+
+	public Q3(String name, int age) {
+		super();
+		this.name = name;
+		this.age = age;
+	}
+
+	@Override
+	public String toString() {
+		return "Q3 [name=" + name + ", age=" + age + "]";
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Q3[] students = new Q3[3];
+		students[0] = new Q3("Alice", 20);
+		students[1] = new Q3("Bob", 22);
+
+		for (Q3 s : students) {
+			System.out.println(s);
+		}
+		
+		Employeee obj1 = new Employeee();
+		
+
+	}
+
+}

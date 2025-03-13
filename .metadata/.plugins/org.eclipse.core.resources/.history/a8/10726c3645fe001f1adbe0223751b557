@@ -1,0 +1,36 @@
+
+
+class Employeee{
+	int eid;
+	String ename;
+	int eage;
+}
+
+public class Q3 {
+	String name;
+	int age;
+
+	public Q3(String name, int age) {
+		super();
+		this.name = name;
+		this.age = age;
+	}
+
+	@Override
+	public String toString() {
+		return "Q3 [name=" + name + ", age=" + age + "]";
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Q3[] students = new Q3[3];
+		students[0] = new Q3("Alice", 20);
+		students[1] = new Q3("Bob", 22);
+
+		for (Q3 s : students) {
+			System.out.println(s);
+		}
+
+	}
+
+}
