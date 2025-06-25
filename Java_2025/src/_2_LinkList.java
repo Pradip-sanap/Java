@@ -16,7 +16,9 @@ public class _2_LinkList {
 		
 		// methods are same as arralist so skip. 
 		// refer book for method
-
+		
+		
+ 
 	}
 
 }

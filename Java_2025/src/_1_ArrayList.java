@@ -26,6 +26,14 @@ public class _1_ArrayList {
 		marks.add(90);
 
 		System.out.println(marks.toString());
+		ArrayList<Integer> jj = new ArrayList<Integer>();
+//		marks.forEach((ele)->{
+//			System.out.println(ele);
+//			jj.add(ele);
+//		});
+//		System.out.println(jj);
+		marks.replaceAll((e) -> e%2==0 ? e*2:e*0);
+		System.out.println(marks);
 
 //		System.out.println(marks.get(0));
 //		System.out.println(marks.getFirst());
@@ -62,16 +70,20 @@ public class _1_ArrayList {
 //		System.out.println(marks.toString());
 
 		// -------equals()------------
-		ArrayList<Person> arr1 = new ArrayList<>();
-		arr1.add(new Person("Ramu", 30));
-		ArrayList<Person> arr2 = arr1; 
+//		ArrayList<Person> arr1 = new ArrayList<>();
+//		arr1.add(new Person("Ramu", 30));
+//		ArrayList<Person> arr2 = arr1; 
 //		arr2.add(new Person("Ramu", 30));
 //		arr2.add(new Person("Shamu", 20));
 		
-		System.out.println(arr1);
-		System.out.println(arr2);
+//		System.out.println(arr1);
+//		System.out.println(arr2);
 		
-		System.out.println(arr1.equals(arr2));
+//		System.out.println(arr1.equals(arr2));
+		
+		
+		
+		
 
 	}
 

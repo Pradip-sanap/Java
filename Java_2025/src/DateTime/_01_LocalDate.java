@@ -13,9 +13,9 @@ public class _01_LocalDate {
 //		LocalDate now = LocalDate.now();
 		LocalDate now = LocalDate.of(2025, 1, 29);
 		System.out.println(now.getDayOfMonth());;
-		System.out.println(now.getDayOfWeek());;
+//		System.out.println(now.getDayOfWeek());;
 		System.out.println(now.getYear());
-		System.out.println(now.getMonth());
+//		System.out.println(now.getMonth());
 		System.out.println(now);
 		
 		

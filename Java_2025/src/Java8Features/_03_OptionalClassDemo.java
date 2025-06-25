@@ -11,6 +11,7 @@ public class _03_OptionalClassDemo {
 		// TODO Auto-generated method stub
 		Optional<String> data1 = Optional.of("Apple");
 		Optional<String> data2 = Optional.ofNullable(null);
+//		Optional<String> data8 = Optional.ofNullable("cherry");
 		Optional<String> data3= Optional.empty();
 		
 //		if(data1.isPresent()) { 
@@ -23,7 +24,7 @@ public class _03_OptionalClassDemo {
 		
 //		System.out.println(data1.get());
 //		System.out.println(data2.get());	// throw error because it hold null value
-		
+ 
 		System.out.println(data1.orElse("Banana"));
 		System.out.println(data2.orElse("Banana"));
 		
