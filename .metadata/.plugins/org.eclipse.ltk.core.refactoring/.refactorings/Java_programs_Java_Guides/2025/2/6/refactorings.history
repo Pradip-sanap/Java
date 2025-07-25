@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Extract local variable &apos;firstNonRepeatingChar&apos; from expression &apos;findFirstNonRepeatingChar(str)&apos;&#x0D;&#x0A;- Original project: &apos;Java_programs_Java_Guides&apos;&#x0D;&#x0A;- Variable name: &apos;firstNonRepeatingChar&apos;&#x0D;&#x0A;- Destination method: &apos;string_programs.Prog1.main(...)&apos;&#x0D;&#x0A;- Variable expression: &apos;findFirstNonRepeatingChar(str)&apos;&#x0D;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;firstNonRepeatingChar&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src&lt;string_programs{Prog1.java" name="firstNonRepeatingChar" replace="true" replaceAllInThisFile="false" selection="694 30" stamp="1738576734587" varType="false" version="1.0"/>
-</session>
