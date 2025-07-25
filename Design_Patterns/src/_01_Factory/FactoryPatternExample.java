@@ -1,4 +1,4 @@
-package Factory;
+package _01_Factory;
 
 interface Polygon {
 	String getType();

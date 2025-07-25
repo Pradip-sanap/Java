@@ -1,4 +1,4 @@
-package Builder;
+package _04_Builder;
 
 // Product Class
 class Mobile {
@@ -61,6 +61,8 @@ class Mobile {
 
         // Build method to return final Mobile object
         public Mobile build() {
+        	System.out.println("---------------");
+        	System.out.println(this);
             return new Mobile(this);
         }
     }
