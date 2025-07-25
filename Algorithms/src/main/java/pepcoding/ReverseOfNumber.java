@@ -1,0 +1,16 @@
+package pepcoding;
+
+public class ReverseOfNumber {
+    public static void main(String[] args) {
+        // Reverse the number
+        int num = 284794;
+
+        int reverseNum = 0;
+        while(num > 0){
+            reverseNum = reverseNum * 10 + (num%10);
+            num /= 10;
+        }
+
+        System.out.println(reverseNum);
+    }
+}
