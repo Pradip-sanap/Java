@@ -1,4 +1,4 @@
-package Collections;
+package Collectionsss;
 import java.util.HashSet;
 
 public class _5_set {

@@ -1,4 +1,4 @@
-package Collections;
+package Collectionsss;
 import java.util.PriorityQueue;
 
 public class _4_PriorityQueue {
