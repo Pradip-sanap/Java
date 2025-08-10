@@ -1,4 +1,4 @@
-package collections;
+package ArrayList;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -21,11 +21,11 @@ public class _01_ArrayListDemo {
 		numbers.add(3, 81);
 		
 //		numbers.addAll(2,  subNumbers);
-		numbers.addAll(subNumbers);
-		
-		numbers.addFirst(50);
-		numbers.addLast(50);
-		
+//		numbers.addAll(subNumbers);
+//		
+//		numbers.addFirst(50);
+//		numbers.addLast(50);
+//		
 		System.out.println(numbers);
 		System.out.println(numbers.remove(0));;
 //		numbers.removeAll(subNumbers);
@@ -58,20 +58,23 @@ public class _01_ArrayListDemo {
 //		numbers.sort(Comparator.naturalOrder());
 //		numbers.sort(Comparator.reverseOrder());
 		
-//		Object[] arr =  numbers.toArray();
-//		System.out.println(Arrays.toString(arr));
+		Object[] arr =  numbers.toArray();
+		System.out.println(Arrays.toString(arr));
 		
-//		numbers.forEach(e -> {
-//			if(e%3==0) {
-//				System.out.println(e +" ");
-//			}
-//		});
+		numbers.forEach(e -> {
+			if(e%3==0) {
+				e = e*1000;
+				System.out.println(e +" ");
+			}
+		});
+		System.out.println(numbers);
 		
-//		numbers.replaceAll(e -> e*2);			// modify original list
+		numbers.replaceAll(e -> e*2);			// modify original list
 				
 		
-//		System.out.println(numbers.hashCode());
+		System.out.println(numbers.hashCode());
 		System.out.println(numbers);
+		
 		
 		
 		ArrayList<Integer> myElements = new ArrayList<>();

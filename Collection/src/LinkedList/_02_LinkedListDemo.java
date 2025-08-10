@@ -1,4 +1,4 @@
-package collections;
+package LinkedList;
 
 import java.util.LinkedList;
 
@@ -10,20 +10,19 @@ public class _02_LinkedListDemo {
 		
 //------1. List as Queue--------------------------------
 		list.offerFirst(55);
-		
 		list.offer(66);		
-		
 		list.offerLast(77);
 		
-//		System.out.println(list.poll());
+		System.out.println(list.poll());
 //		System.out.println(list.pollFirst());
 //		System.out.println(list.pollLast());
 		
-		System.out.println(list.peek());
-		System.out.println(list.peekFirst());
-		System.out.println(list.peekLast());
+//		System.out.println(list.peek());
+//		System.out.println(list.peekFirst());
+//		System.out.println(list.peekLast());
 		
-		System.out.println(list.toString());
+		System.out.println(list);
+//		System.out.println(list.toString().charAt(3));
 		
 //------2. LinkedList as stack---------------------------
 		LinkedList<String> list2 = new LinkedList<>();
@@ -38,7 +37,6 @@ public class _02_LinkedListDemo {
 		System.out.println(list2.toString());
 		
 		System.out.println(list2.pop());
-		
 		System.out.println(list2.toString());
 
 	}

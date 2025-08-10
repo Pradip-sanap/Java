@@ -15,10 +15,10 @@ public class _06_StreamsExcersice {
 		List<Integer> nums = List.of(11, 44, 6, 17, 48);
 		
 		Optional<Integer> minNum = nums.stream()
-			.min((a, b)-> a.compareTo(b));
+											.min(Integer::min);
 		System.out.println(minNum);
-		
-//		List<Boolean> evenNum = nums.stream().forEach(e->e%2==0).collect(Collectors.toList());
+
+
 		List<Integer> newStream =  nums.stream().filter((e) -> e %2==0).collect(Collectors.toList());
 		System.out.println(newStream);
 		

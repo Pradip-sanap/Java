@@ -1,5 +1,5 @@
 
-package collections;
+package Set;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -24,16 +24,17 @@ public class _05_HashsetDemo {
 		hset2.add(50);
 		
 		hset.addAll(hset2);
+		System.out.println(hset);
 		
 		System.out.println(hset.contains(70));
 		
 		System.out.println(hset.containsAll(hset2));
 		
-//		ArrayList<Integer> arr = new ArrayList<>();
-//		hset.forEach(e ->{
-//			arr.add(e * 2);
-//		});
-//		System.out.println(arr.toString());
+		ArrayList<Integer> arr = new ArrayList<>();
+		hset.forEach(e ->{
+			arr.add(e * 2);
+		});
+		System.out.println(arr.toString());
 		
 		System.out.println(hset.isEmpty());
 		
@@ -41,9 +42,11 @@ public class _05_HashsetDemo {
 		
 		hset.remove(20);
 		
+		System.out.println(hset);		
 		
-		
-		System.out.println(hset);
+		for(Integer e: hset) {
+			System.out.println(e);
+		}
 
 	}
 

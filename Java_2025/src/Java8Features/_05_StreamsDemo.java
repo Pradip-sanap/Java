@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class _05_StreamsDemo {
@@ -21,9 +22,9 @@ public class _05_StreamsDemo {
 		
 		
 		
-		List<Integer> sqaures =  marks.stream()
+		Set<Integer> sqaures =  marks.stream()
 									.map((e)-> e*e)						//map()
-									.collect(Collectors.toList());
+									.collect(Collectors.toSet());
 		System.out.println(sqaures);
 		
 		
@@ -68,7 +69,7 @@ public class _05_StreamsDemo {
 		
 		
 		int sum  = numbers.stream()
-						.reduce(0, Integer::sum);
+						.reduce(0, (a,b)->a+b);
 		System.out.println("Sum : "+ sum);
 		
 		long totalLeng = numbers.stream()

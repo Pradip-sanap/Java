@@ -1,4 +1,4 @@
-package collections;
+package Queue;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;
@@ -27,29 +27,33 @@ public class _03_PriorityQueueDemo {
 		heap2.add(20);
 		heap2.add(10);
 		heap2.add(95);
-//		System.out.println(heap2);
+		System.out.println(heap2);
 		
 //		minHeap.addAll(heap2);      //<-------allAll()
 		
 		System.out.println(minHeap.element()); 		//<----return Head element
 		
-		minHeap.offer(75);
-		
-		minHeap.remove();
-		minHeap.poll();
-		
-		minHeap.element();
-		minHeap.peek();
-		
-		minHeap.size();
-		minHeap.clear();
-		minHeap.isEmpty();
-		
-		minHeap.contains(75);
+//		minHeap.offer(75);
+//		
+//		minHeap.remove();
+//		minHeap.poll();
+//		
+//		minHeap.element();
+//		minHeap.peek();
+//		
+		System.out.println(minHeap.size());;
+//		minHeap.clear();
+		System.out.println(minHeap.isEmpty());;
+//		
+		System.out.println(minHeap.contains(75));;
 		
 		
 		
 		System.out.println(minHeap);
+		
+//		while (!minHeap.isEmpty()) {
+//		    System.out.print(minHeap.poll() + " ");
+//		}
 		
 		
 		// Max-heap
@@ -62,7 +66,10 @@ public class _03_PriorityQueueDemo {
 		maxHeap.add(30);
 		maxHeap.add(70);
 		
-		System.out.println("max Heap : "+maxHeap);
+		
+		
+		
+//		System.out.println("max Heap : "+maxHeap);
 
 	}
 
