@@ -1,4 +1,4 @@
-package Java_Collections;
+package default_Class_methods;
 import java.util.*;
 
 public class collection {
