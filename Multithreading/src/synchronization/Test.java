@@ -20,6 +20,11 @@ public class Test {
 		}
 
 		System.out.println(counter.getCount());
+		
+		
+		
+		
+		
 	}
 
 }
