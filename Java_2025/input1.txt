@@ -1,0 +1,5 @@
+Hello, Java!
+This is a test file.
+1234567890
+Symbols: @ # $ % ^ & *
+Unicode: नमस्ते 你好
