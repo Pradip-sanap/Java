@@ -1,4 +1,4 @@
-package _04_Prototype;
+package _05_Prototype;
 
 public interface Prototype extends Cloneable{
 	
