@@ -1,4 +1,4 @@
-package Thread;
+package ThreadsLearning;
 
 class Upload extends Thread{
 	@Override

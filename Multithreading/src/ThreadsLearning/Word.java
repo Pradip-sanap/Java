@@ -1,4 +1,4 @@
-package Thread;
+package ThreadsLearning;
 
 import java.util.Iterator;
 
