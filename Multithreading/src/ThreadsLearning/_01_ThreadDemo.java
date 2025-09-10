@@ -1,4 +1,4 @@
-package Thread;
+package ThreadsLearning;
 
 
 public class _01_ThreadDemo {

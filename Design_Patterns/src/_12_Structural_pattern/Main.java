@@ -1,4 +1,4 @@
-package _13_Structural_pattern;
+package _12_Structural_pattern;
 
 //Step 1: Strategy interface
 interface PaymentStrategy {

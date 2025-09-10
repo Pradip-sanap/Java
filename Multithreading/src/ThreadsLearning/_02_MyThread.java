@@ -1,4 +1,4 @@
-package Thread;
+package ThreadsLearning;
 
 public class _02_MyThread extends Thread{
 	
