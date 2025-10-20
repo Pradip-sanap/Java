@@ -46,7 +46,7 @@ public class _05_StreamsDemo {
 		
 		List<String> names = List.of("Alice", "Bob", "Charlie");
 		names.stream()
-		     .peek(name -> System.out.println("Processing: " + name))
+		     .peek(name -> System.out.println("Processing: " + name))		//peek()
 		     .map(String::toUpperCase)
 		     .forEach(System.out::println);
 		
@@ -69,32 +69,32 @@ public class _05_StreamsDemo {
 		
 		
 		int sum  = numbers.stream()
-						.reduce(0, (a,b)->a+b);
+						.reduce(0, (a,b)->a+b);				// reduce()
 		System.out.println("Sum : "+ sum);
 		
 		long totalLeng = numbers.stream()
-							.count();
+							.count();						//count()
 		System.out.println(totalLeng);
 		
-		Optional<String> firstName = names.stream().findFirst();
+		Optional<String> firstName = names.stream().findFirst();		//findFirst()
 		firstName.ifPresent(System.out::println);  // Output: Alice
 		
-		Optional<Integer> anyName = numbers.stream().findAny();
+		Optional<Integer> anyName = numbers.stream().findAny();			//findAny()
 		anyName.ifPresent(System.out::println); // Output: Alice (or any element)
 		
-		boolean allPositive = numbers.stream().allMatch(e-> e>=0);;
+		boolean allPositive = numbers.stream().allMatch(e-> e>=0);;		//allMatch()
 		System.out.println("Is all number positive: " + allPositive);
 		
-		boolean is88Present =  numbers.stream().anyMatch(e -> e==88);
+		boolean is88Present =  numbers.stream().anyMatch(e -> e==88);	//anyMatch()
 		System.out.println("Is any 88 number present? : " + is88Present);
 		
-		boolean isNegativeNum = numbers.stream().noneMatch(e -> e<0);
+		boolean isNegativeNum = numbers.stream().noneMatch(e -> e<0);	//noneMatch()
 		System.out.println("Is any negative number not present? : "+ isNegativeNum);
 		
-		Optional<Integer> max =  numbers.stream().max(Integer::compareTo);
+		Optional<Integer> max =  numbers.stream().max(Integer::compareTo);			//max()
 		System.out.println("max element: "+ max);
 
-		Optional<Integer> min =  numbers.stream().min(Integer::compareTo);
+		Optional<Integer> min =  numbers.stream().min(Integer::compareTo);			//min()
 		System.out.println("minelement: "+ min);
 		
 		

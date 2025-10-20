@@ -49,8 +49,8 @@ public class _08_HashMapDemo {
             System.out.println(entry.getKey() + " -> " + entry.getValue());
         }
         
-        stud.put(null, null);
         
+        stud.put(null, null);
         System.out.println(stud.getOrDefault(43, "Defaulteed value"));
         
         System.out.println(stud.isEmpty());

@@ -9,7 +9,7 @@ interface Employee {
 }
 
 // Leaf
-class Developer implements Employee {
+class Developer implements Employee {	
     private String name;
     private String position;
 

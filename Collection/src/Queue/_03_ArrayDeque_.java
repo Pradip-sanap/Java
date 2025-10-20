@@ -2,7 +2,7 @@ package Queue;
 
 import java.util.ArrayDeque;
 
-public class ArrayDeque_ {
+public class _03_ArrayDeque_ {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

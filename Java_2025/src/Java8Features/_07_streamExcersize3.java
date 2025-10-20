@@ -39,7 +39,9 @@ public class _07_streamExcersize3 {
 	        );
 		
 //		 Grouping products by category using Streams
-		Map<String, List<Product>> grpByCategory = products.stream().collect(Collectors.groupingBy(Product::getCategory));
+		Map<String, List<Product>> grpByCategory = products.stream()
+												.collect(Collectors.groupingBy(Product::getCategory));
+		System.out.println(grpByCategory);
 		System.out.println(grpByCategory.values());
 		
 		Collection<List<Product>> values = grpByCategory.values();
@@ -52,7 +54,8 @@ public class _07_streamExcersize3 {
 		});
 		
 //		Group and count products in each category
-		Map<String, Long> grpAndCount = products.stream().collect(Collectors.groupingBy(Product::getCategory, Collectors.counting()));
+		Map<String, Long> grpAndCount = products.stream()
+					.collect(Collectors.groupingBy(Product::getCategory, Collectors.counting()));
 		System.out.println(grpAndCount);
 		 
 //		Partition a list of integers into evens and odds using streams.

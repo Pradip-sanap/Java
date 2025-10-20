@@ -40,7 +40,9 @@ public class _07_streamExcersize4 {
                 new User("Emma", true)
         );
 		
-		Map<Boolean, List<User>> partition = users.stream().collect(Collectors.partitioningBy(User::isActive));
+		//partition (saperate out) user base on active status.
+		Map<Boolean, List<User>> partition = users.stream()
+										.collect(Collectors.partitioningBy(User::isActive));
 		System.out.println(partition);
 		
 		List<User> activeUsers = partition.get(true);

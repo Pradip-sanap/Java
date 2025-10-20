@@ -24,18 +24,21 @@ public class _07_streamExcersize2 {
 		List<String> names = Arrays.asList("Alice", "Bob", "Ankit", "Charlie", "Aman", "David");
 
 		Set<String> namesWithA = names.stream()
-											.filter(item -> item.startsWith("A")).collect(Collectors.toSet());
+											.filter(item -> item.startsWith("A"))
+											.collect(Collectors.toSet());
 		System.out.println(namesWithA);
 		
 //		Remove all duplicate elements from a list of integers.
 		List<Integer> arr = List.of(20, 100, 40, 20, 50, 10, 30, 50, 30);
 		List<Integer> uniqueElements = arr.stream()
-											.distinct().collect(Collectors.toList());
+											.distinct()
+											.collect(Collectors.toList());
 		System.out.println(uniqueElements);
 		
 //		Convert a list of strings to uppercase using streams.
 		List<String> upperCaseName = names.stream()
-											.map(item -> item.toUpperCase()).collect(Collectors.toList());
+											.map(item -> item.toUpperCase())
+											.collect(Collectors.toList());
 		System.out.println(upperCaseName);
 		
 //		Find the maximum and minimum values in a list of integers.
@@ -53,14 +56,16 @@ public class _07_streamExcersize2 {
 
 //		Sort a list of strings in ascending and descending order using streams.
 		List<String> sortedNames = names.stream()
-											.sorted().collect(Collectors.toList());
+											.sorted()
+											.collect(Collectors.toList());
 		System.out.println(sortedNames);
 		
 		
 //		Find the second smallest and second largest element in a list of integers.
 //		List<Integer> arr = List.of(20, 100, 40, 20, 50, 10, 30, 50, 30);
 		long secondSmallest = arr.stream()
-										.sorted().distinct()
+										.sorted()
+										.distinct()
 										.skip(1)
 										.findFirst()
 										.orElse(null);

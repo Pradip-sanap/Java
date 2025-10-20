@@ -32,10 +32,10 @@ public class CopyOnWriteArrayListDemo {
 		for(String name : names2) {
 			System.out.println(name);
 			if(name.equals("babu")) {
-				names2.add("lalu");				// Original list is modified during its in use. It throw ConcurrentModificationException
+				names2.add("lalu");				 
 			}
 		}
-		
+//		
 		System.out.println("List after modify: "+ names2);
 	}
 

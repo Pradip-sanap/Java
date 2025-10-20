@@ -3,7 +3,7 @@ package Queue;
 import java.util.ArrayDeque;
 import java.util.Arrays;
 
-public class _04_ArrayDequeDemo {
+public class _02_ArrayDequeDemo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -15,8 +15,9 @@ public class _04_ArrayDequeDemo {
 		deque.offer(105);
 		deque.offerFirst(110);
 		deque.offerLast(130);
+		
 		//----------------------
-//		deque.remove();		
+//		deque.remove(); 
 //		deque.removeFirst();
 //		deque.removeLast();
 //		
@@ -41,11 +42,11 @@ public class _04_ArrayDequeDemo {
 //		deque2.add(110);
 //		System.out.println(deque.containsAll(deque2));  
 		
-		deque.size();
-		Object[] arr=  deque.toArray();
-		System.out.println(Arrays.toString(arr));
-		
-		System.out.println(deque.isEmpty());;
+//		deque.size();
+//		Object[] arr=  deque.toArray();
+//		System.out.println(Arrays.toString(arr));
+//		
+//		System.out.println(deque.isEmpty());;
 		System.out.println(deque);
 		
 

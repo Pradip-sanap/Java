@@ -16,6 +16,8 @@ public class _09_LinkedHashMapDemo {
 		stud.put(84, "Rohan");
 		
 		System.out.println(stud);
+		
+		
 
 	}
 

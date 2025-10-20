@@ -1,10 +1,12 @@
 package Java8Features;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.concurrent.Callable;
 import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
 import java.util.function.BinaryOperator;
@@ -37,7 +39,7 @@ public class _02_FunctionInterfaceDemo {
         
         Predicate<String> startsWithA = (str)->  str.startsWith("A");
         
-//        System.out.println(startsWithA.test("Annanya"));
+        System.out.println(startsWithA.test("Annanya"));
         
         names.stream()
         	.filter(startsWithA)
@@ -97,6 +99,11 @@ public class _02_FunctionInterfaceDemo {
 
         // Using BinaryOperator
         System.out.println(max.apply(10, 20));  // Output: 20
+        
+        
+//        Comparator<Integer> c;
+//        Runnable r;
+//        Callable<Integer> cc;
 	}
 
 }

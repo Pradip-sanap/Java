@@ -3,7 +3,7 @@ package Queue;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
-public class _03_PriorityQueueDemo {
+public class _01_PriorityQueueDemo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

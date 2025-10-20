@@ -22,7 +22,7 @@ class Person {
     }
 }
 
-public class _07_streamEe5 {
+public class _07_streamExcersize5 {
 
 	public static void main(String[] args) {
 		List<Person> persons = Arrays.asList(
@@ -35,7 +35,10 @@ public class _07_streamEe5 {
 		
 //		Sort a list of custom objects by multiple fields (e.g., by age and then by name).
 		List<Person> sorted = persons.stream()	
-					.sorted(Comparator.comparing(Person::getAge).thenComparing(Person::getName, String.CASE_INSENSITIVE_ORDER))
+					.sorted(
+							Comparator.comparing(Person::getAge)
+							.thenComparing(Person::getName, String.CASE_INSENSITIVE_ORDER)
+					)
 					.collect(Collectors.toList());
 		
 		System.out.println(sorted);

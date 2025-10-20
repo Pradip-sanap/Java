@@ -44,7 +44,7 @@ class OutputRestrictedDeque<E> {
 
 
 
-public class _7_Deque_SpecialCase {
+public class _03_Deque_SpecialCase {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
