@@ -1,4 +1,4 @@
-package File_Handling;
+package BYTE_streams;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

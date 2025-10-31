@@ -29,12 +29,18 @@ public class CopyOnWriteArrayListDemo {
 		names2.add("babu");
 		names2.add("shyam");
 
-		for(String name : names2) {
-			System.out.println(name);
-			if(name.equals("babu")) {
-				names2.add("lalu");				 
-			}
-		}
+//		for(String name : names2) {
+//			System.out.println(name);
+//			if(name.equals("babu")) {
+//				names2.add("lalu");				 
+//			}
+//		}
+		
+		// Iteration (snapshot)
+//        for (String item : names2) {
+//            System.out.println("Iterating: " + item);
+//            names2.add("New Item"); // won't affect this iteration
+//        }
 //		
 		System.out.println("List after modify: "+ names2);
 	}
