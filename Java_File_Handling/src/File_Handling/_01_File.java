@@ -17,25 +17,25 @@ public class _01_File {
 		System.out.println(Arrays.toString("Hello".getBytes()));
 		
 		
-//		if(file.exists()) {										// check already present or not
-//			System.out.println("File exists");
-//		}
+		if(file.exists()) {										// check already present or not
+			System.out.println("File exists");
+		}
 //		
-//		if(file.isFile()) {										// check file or not
-//			System.out.println("Yes, its file");
-//		}else {
-//			System.out.println("No its not file");
-//		}
+		if(file.isFile()) {										// check file or not
+			System.out.println("Yes, its file");
+		}else {
+			System.out.println("No its not file");
+		}
 //		
-//		if(file.isDirectory()) {								// check for folder
-//			System.out.println("Yes, its Directory");
-//		}
+		if(file.isDirectory()) {								// check for folder
+			System.out.println("Yes, its Directory");
+		}
 //		
-//		System.out.println(file.length());						// characters in files
+		System.out.println(file.length());						// characters in files
 //		
-//		System.out.println(file.getPath());						// get path of file
-//		System.out.println(file.getAbsolutePath());
-//		System.out.println(file.getCanonicalPath());			// mostly it prefered
+		System.out.println(file.getPath());						// get path of file
+		System.out.println(file.getAbsolutePath());
+		System.out.println(file.getCanonicalPath());			// mostly it prefered
 		
 //		if(file.delete()) {										// delete file
 //			System.out.println("File deleted");
@@ -57,8 +57,8 @@ public class _01_File {
 //		file.setWritable(true);
 //		file.setExecutable(false);
 		
-//		System.out.println(file.canRead());
-//		System.out.println(file.canWrite());
+		System.out.println(file.canRead());
+		System.out.println(file.canWrite());
 //		System.out.println(file.canExecute());
 		
 		/* Listing files and folders */
@@ -71,6 +71,8 @@ public class _01_File {
 		for(File e : listFiles) {
 			System.out.println(e);
 		}
+		
+		
 		
 		
 		

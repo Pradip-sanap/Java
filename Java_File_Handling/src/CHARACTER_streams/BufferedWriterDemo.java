@@ -1,11 +1,9 @@
-package File_Handling;
+package CHARACTER_streams;
 
-public class _03_Path {
+public class BufferedWriterDemo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		
 
 	}
 

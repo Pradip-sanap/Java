@@ -1,4 +1,4 @@
-package File_Handling;
+package CHARACTER_streams;
 
 import java.io.File;
 import java.io.FileWriter;

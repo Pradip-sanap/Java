@@ -8,12 +8,14 @@ import java.nio.file.StandardCopyOption;
 import java.util.Arrays;
 import java.util.List;
 
-public class _02_NIOpackage {
+public class _02_Files {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		Path file = Paths.get("demo.txt");
         Path dir = Paths.get("demoDir");
+        
+        
 		
 //		if(!Files.exists(file)) {
 //			Files.createFile(file);
