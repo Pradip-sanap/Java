@@ -1,4 +1,4 @@
-package SOLID_Principles;
+package __SOLID_Principles;
 
 class User1 {
     private String name;

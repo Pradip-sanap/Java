@@ -1,4 +1,4 @@
-package SOLID_Principles;
+package __SOLID_Principles;
 interface Shape {
     double calculateArea();
 }

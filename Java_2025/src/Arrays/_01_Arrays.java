@@ -56,12 +56,6 @@ public class _01_Arrays {
 		List<Integer> asList = Arrays.asList(2, 4, 5, 7 ,8 ,9);
 		System.out.println(asList.toString());
 		
-		
-		
-		
-		
-		
-		
 	}
 
 }

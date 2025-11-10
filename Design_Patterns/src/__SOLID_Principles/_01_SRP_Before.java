@@ -1,4 +1,4 @@
-package SOLID_Principles;
+package __SOLID_Principles;
 
 // THis voilating SRP because multiple functionality are 
 // define in same class.

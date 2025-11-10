@@ -1,4 +1,4 @@
-package SOLID_Principles;
+package __SOLID_Principles;
 class Bird {
     public void fly() {
         System.out.println("Bird is flying");

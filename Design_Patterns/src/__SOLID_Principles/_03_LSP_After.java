@@ -1,4 +1,4 @@
-package SOLID_Principles;
+package __SOLID_Principles;
 
 abstract class _Bird {
 	public abstract void move();
