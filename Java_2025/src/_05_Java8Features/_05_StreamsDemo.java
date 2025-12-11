@@ -65,7 +65,8 @@ public class _05_StreamsDemo {
 		//------------------------------------------------
 		//numbers=[33, 55, 11, 88, 33, 11, 55]
 		names.stream()
-				.forEach(System.out::println);
+				.forEach(System.out::println);				// forEach()
+		
 		
 		
 		int sum  = numbers.stream()

@@ -38,9 +38,9 @@ public class _07_streamExcersize3 {
 	            new Product("Banana", "Fruits", 60)
 	        );
 		
-//		 Grouping products by category using Streams
+//		Grouping products by category using Streams
 		Map<String, List<Product>> grpByCategory = products.stream()
-												.collect(Collectors.groupingBy(Product::getCategory));
+										.collect(Collectors.groupingBy(Product::getCategory));
 		System.out.println(grpByCategory);
 		System.out.println(grpByCategory.values());
 		

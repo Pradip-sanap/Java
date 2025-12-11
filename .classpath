@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Collection/src"/>
+	<classpathentry kind="src" path="Design_Patterns/src"/>
+	<classpathentry kind="src" path="Java_2025/src"/>
+	<classpathentry excluding="metrics/configs/|metrics/" kind="src" path="Java_File_Handling/logs"/>
+	<classpathentry excluding="configs/" kind="src" path="Java_File_Handling/logs/metrics"/>
+	<classpathentry kind="src" path="Java_File_Handling/logs/metrics/configs"/>
+	<classpathentry kind="src" path="Java_File_Handling/src"/>
+	<classpathentry kind="src" path="Multithreading/src"/>
+	<classpathentry kind="src" path="Pepcoding/src"/>
+	<classpathentry kind="output" path="Collection/bin"/>
+</classpath>

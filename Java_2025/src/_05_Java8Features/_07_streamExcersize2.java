@@ -23,6 +23,7 @@ public class _07_streamExcersize2 {
 //		From a list of strings, filter and return only those starting with a specific letter.
 		List<String> names = Arrays.asList("Alice", "Bob", "Ankit", "Charlie", "Aman", "David");
 
+		//filter name which start with letter "A"
 		Set<String> namesWithA = names.stream()
 											.filter(item -> item.startsWith("A"))
 											.collect(Collectors.toSet());
@@ -35,7 +36,7 @@ public class _07_streamExcersize2 {
 											.collect(Collectors.toList());
 		System.out.println(uniqueElements);
 		
-//		Convert a list of strings to uppercase using streams.
+//		Convert a list of strings to upper case using streams
 		List<String> upperCaseName = names.stream()
 											.map(item -> item.toUpperCase())
 											.collect(Collectors.toList());
@@ -66,7 +67,7 @@ public class _07_streamExcersize2 {
 		long secondSmallest = arr.stream()
 										.sorted()
 										.distinct()
-										.skip(1)
+										.skip(1) 
 										.findFirst()
 										.orElse(null);
 		System.out.println(secondSmallest);

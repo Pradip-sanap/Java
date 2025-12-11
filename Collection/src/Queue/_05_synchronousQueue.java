@@ -2,13 +2,14 @@ package Queue;
 
 import java.util.concurrent.SynchronousQueue;
 
+ 
 public class _05_synchronousQueue {
-    public static void main(String[] args) {
-        SynchronousQueue<Integer> queue = new SynchronousQueue<>();
+    public static void main(String[] args) throws InterruptedException {
+//        SynchronousQueue<Integer> queue = new SynchronousQueue<>();
         
-        queue.add(11);
-        
-        System.out.println(queue);
+//        queue.add(11);
+//        
+//        System.out.println(queue);
 
         // Producer
 //        new Thread(() -> {
@@ -58,5 +59,18 @@ public class _05_synchronousQueue {
 //                }
 //            }).start();
 //        }
+    	
+    	SynchronousQueue<Integer> queue = new SynchronousQueue<Integer>();
+    	queue.put(10);
+    
+//    	queue.add(20);
+//    	Thread.sleep(1000);
+    	
+    	Integer take = queue.take();
+    	
+//    	System.out.println(queue);
+    	System.out.println(take);
+    	
+    	
     }
 }

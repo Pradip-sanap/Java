@@ -14,36 +14,44 @@ public class _06_StreamsExcersice {
 		// TODO Auto-generated method stub
 		List<Integer> nums = List.of(11, 44, 6, 17, 48);
 		
+		//find min elemet
 		Optional<Integer> minNum = nums.stream()
 											.min(Integer::min);
 		System.out.println(minNum);
 
 
+		//filter out even elements
 		List<Integer> newStream =  nums.stream()
 										.filter((e) -> e %2==0)
 										.collect(Collectors.toList());
 		System.out.println(newStream);
 		
+		// multiply every element with 5
 		List<Integer> newStream2 = nums.stream()
 										.map(e -> e * 5)
 										.collect(Collectors.toList());
 		System.out.println(newStream2);
 		
+		
+		//find sum of all elements
 		int sum  = nums.stream()
 						.reduce(0,(a,b) -> a+b);
 			
 		System.out.println(sum);
 		
+		//convert sstring to upperCase
 		List<String> names = List.of("Rohit", "Messi", "Ronaldo","Sachin");
 		List<String> upperCaseName = names.stream()
 											.map(name -> name.toUpperCase())
 											.collect(Collectors.toList());
 		System.out.println(upperCaseName);
 	
+		//find string which contain substring given.
 		List<String> find_hit = names.stream()
 									.filter(name -> name.contains("hit"))
 									.collect(Collectors.toList());
 		System.out.println(find_hit);
+		
 		
 		Long greaterThan10 =  nums.stream()
 									.filter(e -> e>10)

@@ -50,8 +50,7 @@ public class _02_FunctionInterfaceDemo {
         
 //------2. Consumer<T>
         
-        Consumer<String> logger = msg -> System.out.println(msg);
-        
+        Consumer<String> logger = msg -> System.out.println(msg);  
         logger.accept("program exacuted!!");
         
 //------3.Function<T, R>
