@@ -30,6 +30,14 @@ public class _07_streamPractice {
 			    List.of("A", "B"),
 			    List.of("C", "D"));
 		System.out.println(nestedList.stream().flatMap(List::stream).collect(Collectors.toList()));;
+		
+		
+		
+		List<Integer> mynumbers = list.stream().sorted().takeWhile(e -> e<7).collect(Collectors.toList());
+		System.out.println(mynumbers);
+		
+		List<Integer> MyRemainingNum = list.stream().sorted().dropWhile(e -> e<5).collect(Collectors.toList());
+		System.out.println(MyRemainingNum);
 
 	}
 
