@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.NoSuchElementException;
 import java.util.Optional;
+import java.util.function.Function;
 
 public class _03_OptionalClassDemo {
 
@@ -11,18 +12,19 @@ public class _03_OptionalClassDemo {
 		// TODO Auto-generated method stub
 		Optional<String> data1 = Optional.of("Apple");
 		Optional<String> data2 = Optional.ofNullable(null);
-//		Optional<String> data8 = Optional.ofNullable("cherry");
+		Optional<String> data8 = Optional.ofNullable("cherry");
 		Optional<String> data3= Optional.empty();
 		
-//		if(data1.isPresent()) { 
-//			System.out.println("Data present");
-//		}
+		if(data1.isPresent()) { 
+			System.out.println("Data present");
+		}
 		
-//		data1.ifPresent((value)-> 
-//				System.out.println("hello" + value)
-//			);
+		data1.ifPresent((value)-> 
+				System.out.println("hello" + value)
+			);
 		
-//		System.out.println(data1.get());
+		
+		System.out.println(data1.get());
 //		System.out.println(data2.get());	// throw error because it hold null value
  
 		System.out.println(data1.orElse("Banana"));
@@ -53,26 +55,23 @@ public class _03_OptionalClassDemo {
         );
 		
 		//-------------------------------------
-//		HashMap<Integer, String> hmap = new HashMap<>();
-//		hmap.put(1, "Pradip");
-//		hmap.put(4, "Rohan");
-//		hmap.put(8, "Harshal");
-//		hmap.put(7, "Vishal");
-//		hmap.put(3, "Sarthak");
+		HashMap<Integer, String> hmap = new HashMap<>();
+		hmap.put(1, "Pradip");
+		hmap.put(4, "Rohan");
+		hmap.put(8, "Harshal");
+		hmap.put(7, "Vishal");
+		hmap.put(3, "Sarthak");
 		
-//		ArrayList<Integer> arr = new ArrayList<>();
-//		arr.add(22);
-//		arr.add(11);
-//		arr.add(66);
-//		arr.add(55);
-//		arr.add(44);
-//		
-//		Optional<ArrayList<Integer>> data = Optional.ofNullable(arr);
-//		System.out.println(data );
-//		System.out.println(data.get());
-//		data.map( element  ->{
-//			
-//		});
+		ArrayList<Integer> arr = new ArrayList<>();
+		arr.add(22);
+		arr.add(11);
+		arr.add(66);
+		arr.add(55);
+		arr.add(44);
+		
+		Optional<ArrayList<Integer>> data = Optional.ofNullable(arr);
+		System.out.println(data );
+		System.out.println(data.get()); 
 		
 		
 		

@@ -15,21 +15,21 @@ public class CollectorsClass {
 		List<String> names = Arrays.asList("Alice", "Bob", "Charlie", "Alice");
 
         // Collect into a List
-        List<String> list = names.stream().collect(Collectors.toList());
+        List<String> list = names.stream().collect(Collectors.toList());		//toList()
         System.out.println("List: " + list);
 
         // Collect into a Set
-        Set<String> set = names.stream().collect(Collectors.toSet());
+        Set<String> set = names.stream().collect(Collectors.toSet());			//toSet()
         System.out.println("Set: " + set);
         
      // Collect into a Map
         Map<String, Integer> map = names.stream()
         		.distinct()
-                .collect(Collectors.toMap(item -> item, String::length));
+                .collect(Collectors.toMap(item -> item, String::length));		//toMap()
         System.out.println("Map: " + map);
         
      // Join elements with a delimiter
-        String result = names.stream().collect(Collectors.joining(", "));
+        String result = names.stream().collect(Collectors.joining(", "));		//joining()
         System.out.println("Joined: " + result);
         
         
@@ -37,14 +37,14 @@ public class CollectorsClass {
         List<String> items = Arrays.asList("Apple", "Banana", "Cherry", "Avocado");
         // Group by first letter
         Map<Character, List<String>> grouped = items.stream()
-                .collect(Collectors.groupingBy(item -> item.charAt(0)));
+                .collect(Collectors.groupingBy(item -> item.charAt(0)));		//groupingBy()
         System.out.println("Grouped: " + grouped);
         
         
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6);
         // Partition into even and odd numbers
         Map<Boolean, List<Integer>> partitioned = numbers.stream()
-                .collect(Collectors.partitioningBy(num -> num % 2 == 0));
+                .collect(Collectors.partitioningBy(num -> num % 2 == 0));		//partitioningBy()
         System.out.println("Partitioned: " + partitioned);
         
         
@@ -52,7 +52,7 @@ public class CollectorsClass {
         List<String> items2 = Arrays.asList("Apple", "Banana", "Cherry", "Apple", "Banana");
 
         // Count total elements
-        long count = items2.stream().collect(Collectors.counting());
+        long count = items2.stream().collect(Collectors.counting());			//counting()
         System.out.println("Total Count: " + count);
 
         // Count occurrences of each item

@@ -1,9 +1,9 @@
-package _05_Java8Features;
+package _12_Base64;
 
 import java.util.Arrays;
 import java.util.Base64;
 
-public class _08_Base64Example {
+public class Base64Demo {
 
 	public static void main(String[] args) {
 //		Given mesg

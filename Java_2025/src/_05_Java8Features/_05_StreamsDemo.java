@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -12,8 +13,9 @@ public class _05_StreamsDemo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		List<Integer> marks = List.of(2,4,7,9,5,1,10,14,17,19);
+		List<Integer> marks = List.of(88,2,4,7,9,5,1,10,14,17,19, 7 );
 		
+		//Q. filter out even numbers and sort them in natural order.
 		List<Integer> evenNum = marks.stream()
 								.filter((e)-> e%2==0)					//filter()
 								.sorted()								//sorted
@@ -21,20 +23,20 @@ public class _05_StreamsDemo {
 		System.out.println(evenNum);
 		
 		
-		
-		Set<Integer> sqaures =  marks.stream()
-									.map((e)-> e*e)						//map()
+		//Q. multiply each element with 22 and collect them in set.
+		Set<Integer> n =  marks.stream()
+									.map((e)-> e*22)						//map()
 									.collect(Collectors.toSet());
-		System.out.println(sqaures);
+		System.out.println(n);
 		
-		
+		//Q. remove duplicate elements
 		List<Integer> numbers = List.of(33, 55, 11, 88, 33, 11, 55);
 		List<Integer> unique = numbers.stream()
 									.distinct()							//distinct()
 									.collect(Collectors.toList());
 		System.out.println(unique);
 		
-		
+		//Q. Convert nested list into single list.
 		List<List<String>> nestedList = List.of(
 						    List.of("A", "B"),
 						    List.of("C", "D"));
@@ -44,18 +46,21 @@ public class _05_StreamsDemo {
 			                               .collect(Collectors.toList());
 		System.out.println(flatList);
 		
+		//Q. debug the stream using peek() method
 		List<String> names = List.of("Alice", "Bob", "Charlie");
 		names.stream()
 		     .peek(name -> System.out.println("Processing: " + name))		//peek()
 		     .map(String::toUpperCase)
 		     .forEach(System.out::println);
 		
+		//Q. take out first 3 elements from list
 		List<Integer> numbers2 = List.of(1, 2, 3, 4, 5);
 		List<Integer> limitedNumbers = numbers2.stream()
 		                                       .limit(3)				//limit()
 		                                       .collect(Collectors.toList());
 		System.out.println(limitedNumbers);
 		
+		//Q. Skip first 2 elements and take remaining elements to list.
 		List<Integer> skippedNumbers = numbers2.stream()
 		                					.skip(2)					//skip()
 		                					.collect(Collectors.toList());
@@ -68,20 +73,24 @@ public class _05_StreamsDemo {
 				.forEach(System.out::println);				// forEach()
 		
 		
-		
+		//Q. collect all element into single value.
 		int sum  = numbers.stream()
 						.reduce(0, (a,b)->a+b);				// reduce()
 		System.out.println("Sum : "+ sum);
 		
+		//Q. count the total no. of elements in list.
 		long totalLeng = numbers.stream()
 							.count();						//count()
 		System.out.println(totalLeng);
 		
-		Optional<String> firstName = names.stream().findFirst();		//findFirst()
-		firstName.ifPresent(System.out::println);  // Output: Alice
 		
-		Optional<Integer> anyName = numbers.stream().findAny();			//findAny()
-		anyName.ifPresent(System.out::println); // Output: Alice (or any element)
+		//Q. Get first element from list.
+		List<String> products = List.of("Freez", "TV", "Mobile", "Laptop", "Mouse", "Monitor", "Mouse", "Charger");
+		Optional<String> firstName = products.stream().findFirst();		//findFirst()
+		firstName.ifPresent(System.out::println);  // Output: Freez
+		
+		Optional<String> anyName = products.stream().findAny();			//findAny()
+		anyName.ifPresent(System.out::println);  
 		
 		boolean allPositive = numbers.stream().allMatch(e-> e>=0);;		//allMatch()
 		System.out.println("Is all number positive: " + allPositive);
@@ -97,6 +106,20 @@ public class _05_StreamsDemo {
 
 		Optional<Integer> min =  numbers.stream().min(Integer::compareTo);			//min()
 		System.out.println("minelement: "+ min);
+		
+		
+		//----------------------------Collectors utility class methods-------------------------
+		List<String> fruits = List.of("Apple", "Banana", "Cherry", "Citaphal", "Papaya");
+		Map<String, Integer> fruitsByLength = 
+						fruits.stream().collect(Collectors.toMap(e-> e, e->e.length()));	//toMap()
+		System.out.println(fruitsByLength);
+		
+		String fruitsAsString = fruits.stream().collect(Collectors.joining(", "));			//joining()
+		System.out.println(fruitsAsString);
+		
+		Long totalFruits = fruits.stream().collect(Collectors.counting());					//counting()
+		System.out.println(totalFruits);
+		
 		
 		
 	

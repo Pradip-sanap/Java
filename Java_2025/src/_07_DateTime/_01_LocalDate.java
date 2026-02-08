@@ -10,19 +10,20 @@ import java.time.ZonedDateTime;
 public class _01_LocalDate {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		//--------------Local Date----------------
 //		LocalDate now = LocalDate.now();
 		LocalDate now = LocalDate.of(2025, 1, 29);
 		System.out.println(now.getDayOfMonth());;
-//		System.out.println(now.getDayOfWeek());;
+		System.out.println(now.getDayOfWeek());;
 		System.out.println(now.getYear());
-//		System.out.println(now.getMonth());
+		System.out.println(now.getMonth());
 		System.out.println(now);
 		
 		
 		LocalDate myDate = LocalDate.of(1990, 2, 7);
 		
-		//-----------------------------------
+		System.out.println("------------------------------------------");
+		//-------------Local TIme--------------
 		LocalTime time = LocalTime.now();
 		System.out.println(time);
 		System.out.println(time.getHour());
@@ -35,7 +36,8 @@ public class _01_LocalDate {
 		LocalDateTime dateTime = LocalDateTime.now();
 		System.out.println(dateTime);
 
-		//----------------------------
+		System.out.println("------------------------------------------");
+		//-------------Zoned Date Time----------
 		ZonedDateTime z = ZonedDateTime.now();
 		System.out.println(z);
 		System.out.println(z.getZone());
