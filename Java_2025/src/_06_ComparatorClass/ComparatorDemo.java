@@ -12,16 +12,23 @@ public class ComparatorDemo {
 		// TODO Auto-generated method stub
 		List<String> fruits = List.of("Mango", "Banana", "Apple", "PineApple", "Cherry");
 
-		List<String> sorted1 = fruits.stream().sorted(Comparator.naturalOrder()).collect(Collectors.toList());
+		List<String> sorted1 = fruits.stream()
+				.sorted(Comparator.naturalOrder())
+				.collect(Collectors.toList());
 		System.out.println(sorted1);
 
-		List<String> reversesorted2 = fruits.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+		List<String> reversesorted2 = fruits.stream()
+				.sorted(Comparator.reverseOrder())
+				.collect(Collectors.toList());
 		System.out.println(reversesorted2);
 
-		List<String> sorted3 = fruits.stream().sorted((o1, o2) -> o1.compareTo(o2)).collect(Collectors.toList());
+		List<String> sorted3 = fruits.stream()
+				.sorted((o1, o2) -> o1.compareTo(o2))
+				.collect(Collectors.toList());
 		System.out.println(sorted3);
 
-		List<String> sorted4 = fruits.stream().sorted((e1, e2) -> e1.charAt(0) - e2.charAt(0))
+		List<String> sorted4 = fruits.stream()
+				.sorted((e1, e2) -> e1.charAt(0) - e2.charAt(0))
 				.collect(Collectors.toList());
 		System.out.println(sorted4);
 

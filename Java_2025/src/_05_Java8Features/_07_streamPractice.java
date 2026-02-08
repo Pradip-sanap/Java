@@ -38,6 +38,12 @@ public class _07_streamPractice {
 		
 		List<Integer> MyRemainingNum = list.stream().sorted().dropWhile(e -> e<5).collect(Collectors.toList());
 		System.out.println(MyRemainingNum);
+		
+		List<List<String>> names = List.of(
+			    List.of("Alice", "Bob"),
+			    List.of("Charlie", "Dave")
+			);
+		names.stream().flatMap(l -> l.stream()).forEach(System.out::println);
 
 	}
 

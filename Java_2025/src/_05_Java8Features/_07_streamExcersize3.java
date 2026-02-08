@@ -46,10 +46,10 @@ public class _07_streamExcersize3 {
 		
 		Collection<List<Product>> values = grpByCategory.values();
 		System.out.println(values);
-		values.forEach(obj -> {
-			System.out.println(obj);
-			for(Product prod : obj) {
-				System.out.println(prod.getPrice());
+		values.forEach(list -> {
+			System.out.println(list);
+			for(Product obj : list) {
+				System.out.println(obj.getPrice());
 			}
 		});
 		

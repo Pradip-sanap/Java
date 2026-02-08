@@ -9,13 +9,13 @@ public class _02_DateTime_exersice {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		LocalDate datenow = LocalDate.now();
-//		System.out.println(datenow);
+		System.out.println(datenow);
 		
 		LocalDate specificDate = LocalDate.of(2023, 12, 25);
-//		System.out.println(specificDate);
+		System.out.println(specificDate);
 		
 		LocalDate parseDate = LocalDate.parse("2025-05-19");
-//		System.out.println(parseDate);
+		System.out.println(parseDate);
 		
 //		LocalDate date = LocalDate.of(2025, 6, 11);
 //		System.out.println(date.getYear());         // 2025 

@@ -16,6 +16,7 @@ import java.util.function.Predicate;
 import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
 
+ 
 @FunctionalInterface
 interface Calculator {
     int operate(int a, int b);
@@ -24,6 +25,7 @@ interface Calculator {
 public class _02_FunctionInterfaceDemo {
 
 	public static void main(String[] args) {
+		
 		Calculator add = (a, b) -> a + b;
         Calculator multiply = (a, b) -> a * b;
 

@@ -12,7 +12,7 @@ public class _07_streamExcersize2 {
 	public static void main(String[] args) {
 		// Given a list of integers, calculate the sum using streams.
 		List<Integer> nums = List.of(5, 3, 9, 12, 18, 20, 5);
-
+		
 		int sum = nums.stream().reduce(0, Integer::sum);
 		System.out.println(sum);
 
@@ -20,7 +20,7 @@ public class _07_streamExcersize2 {
 		double avg = nums.stream().mapToInt(Integer::intValue).average().orElse(0.0);
 		System.out.println(avg);
 
-//		From a list of strings, filter and return only those starting with a specific letter.
+//		From a list of strings, filter and return only those names which starting with a specific letter.
 		List<String> names = Arrays.asList("Alice", "Bob", "Ankit", "Charlie", "Aman", "David");
 
 		//filter name which start with letter "A"
