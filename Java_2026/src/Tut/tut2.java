@@ -65,9 +65,19 @@ public class tut2 {
 //        long parsedUnsignedLong = Long.parseUnsignedLong(unsignedLongStr);
 //        System.out.println("Parsed unsigned long from string: " + parsedUnsignedLong);
         
+        
+        // Big Integer hands on
         BigInteger isprime = new BigInteger("19");
         System.out.println(isprime.isProbablePrime(1));;
+        
+        BigInteger bigNum1 = new BigInteger("8738782889289218919283927329839232");
+        System.out.println(bigNum1.compareTo(new BigInteger("9")));
+        BigInteger bigNum2 = new BigInteger("8");
+        BigInteger add = bigNum1.add(bigNum2);
+        System.out.println(add);
 		
+        
+        
 	}
 
 }

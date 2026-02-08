@@ -29,7 +29,8 @@ public class _01_PriorityQueueDemo {
 		heap2.add(95);
 		System.out.println(heap2);
 		
-//		minHeap.addAll(heap2);      //<-------allAll()
+		minHeap.addAll(heap2);      //<-------allAll()
+		System.out.println(minHeap);
 		
 		System.out.println(minHeap.element()); 		//<----return Head element
 		
@@ -69,7 +70,7 @@ public class _01_PriorityQueueDemo {
 		
 		
 		
-//		System.out.println("max Heap : "+maxHeap);
+		System.out.println("max Heap : "+maxHeap);
 
 	}
 

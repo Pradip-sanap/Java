@@ -2,6 +2,7 @@ package Map;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -66,6 +67,8 @@ public class _08_HashMapDemo {
         
         stud.remove(1);
         stud.remove(65, "Sameer");
+        
+        Collections.sort(null, null);
         
 		
 		System.out.println(stud);
