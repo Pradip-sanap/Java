@@ -17,6 +17,7 @@ public class RecordDemo {
 		System.out.println(obj.email());
 		
 		System.out.println(obj.toString());
+		
 
 	}
 

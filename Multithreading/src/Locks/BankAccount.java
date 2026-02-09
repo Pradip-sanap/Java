@@ -6,15 +6,13 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class BankAccount {
 	
-	private int balance = 50;
-	
+	private int balance = 50; 
 	private final Lock key = new ReentrantLock();
-	public void withdrawal(int amount) {
-		
+	public void withdrawal(int amount) { 
 		System.out.println(Thread.currentThread().getName()+" attempt to withdraw "+ amount);
 		
 		try {
-//			key.lock();
+	//			key.lock();
 			if(key.tryLock(1000, TimeUnit.MILLISECONDS)){
 				if(balance>=amount) {
 					System.out.println(Thread.currentThread().getName() +" procedding with withdrawal");
