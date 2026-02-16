@@ -10,13 +10,11 @@ public class project1 {
         ExecutorService executor = Executors.newFixedThreadPool(2);
         
      // 2. Create and submit 5 tasks
-        for (int i = 1; i <= 5; i++) {
+        for (int i = 1; i <= 20; i++) {
             int taskNumber = i;
 
             executor.submit(() -> {
-                System.out.println("Task " + taskNumber +
-                        " executed by " +
-                        Thread.currentThread().getName());
+                System.out.println("Task " + taskNumber + " executed by " + Thread.currentThread().getName());
 
                 try {
                     // Simulate work
@@ -25,6 +23,7 @@ public class project1 {
                     Thread.currentThread().interrupt();
                 }
             });
+            System.out.println(i);
         }
 
         // 3. Shutdown the executor

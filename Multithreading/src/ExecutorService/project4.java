@@ -19,7 +19,7 @@ public class project4 {
         List<Future<Integer>> futures = new ArrayList<>();
         
         for(int num : numbers) {
-        	
+        	System.out.println(num);
         	futures.add(
         			executor.submit(() -> {
 		                System.out.println(
