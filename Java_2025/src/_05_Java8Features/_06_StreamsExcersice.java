@@ -65,7 +65,7 @@ public class _06_StreamsExcersice {
 //		Sort a list of integers in ascending and descending order using Streams.
 		List<Integer> sortedNums =  nums.stream()
 										.sorted()								//increasing or natural order
-										//.sorted(Comparator.reverseOrder())	//Descreasing order.
+										//.sorted(Comparator.reverseOrder())	//Decreasing order.
 										.collect(Collectors.toList());
 		System.out.println(sortedNums);
 		
@@ -114,7 +114,9 @@ public class _06_StreamsExcersice {
         //Group employees by department and collect their names
         Map<String, List<String>> ans2 = empls.stream()
 				.collect(Collectors.groupingBy(emp -> emp.department, 
-						Collectors.mapping(emp -> emp.getName(), Collectors.toList())));
+												Collectors.mapping(emp -> emp.getName(), Collectors.toList()
+												)
+						));
         System.out.println(ans2);
         
       //Q. Group employees: First by department, Then by job title

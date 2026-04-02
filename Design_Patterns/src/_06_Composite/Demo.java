@@ -6,6 +6,7 @@ import java.util.List;
 //Component
 interface FileSystem {
 	void showDetails();
+	String getName();
 }
 
 //Leaf
@@ -14,6 +15,10 @@ class File implements FileSystem {
 
 	public File(String name) {
 		this.name = name;
+	}
+	
+	public String getName() {
+		return name;
 	}
 
 	@Override
@@ -38,6 +43,10 @@ class Directory implements FileSystem {
 	public void remove(FileSystem fs) {
 		children.remove(fs);
 	}
+	
+	public String getName() {
+		return name;
+	}
 
 	@Override
 	public void showDetails() {
@@ -45,6 +54,18 @@ class Directory implements FileSystem {
 		for (FileSystem fs : children) {
 			fs.showDetails();
 		}
+	}
+	
+	void printFolderAndFiles() {
+		System.out.println("------------------------------------");
+		System.out.println("Directory: "+ name);
+		for (FileSystem fs : children) {
+			if(fs instanceof Directory ) {
+				System.out.println("Directory name: "+fs.getName());
+			}else {
+				System.out.println("File name: "+ fs.getName());
+			}
+		} 
 	}
 }
 
@@ -63,12 +84,17 @@ public class Demo {
         documents.add(file1);
         documents.add(file3);
         
+        
         pictures.add(file2);
         
         root.add(documents);
         root.add(pictures);
         
         root.showDetails();
+        
+        root.printFolderAndFiles();
+        documents.printFolderAndFiles();
+        pictures.printFolderAndFiles();
 
 	}
 

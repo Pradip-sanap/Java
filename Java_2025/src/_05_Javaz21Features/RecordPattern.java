@@ -4,6 +4,7 @@ record Person(String name, int id, double salary) {}
 
 //nested Record
 record Address(String street, String locality, int pincode) { }
+
 record Employee(String name, int eid, Address addr ) { }
 
 public class RecordPattern {

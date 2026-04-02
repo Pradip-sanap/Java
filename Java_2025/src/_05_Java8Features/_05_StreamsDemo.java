@@ -15,7 +15,7 @@ public class _05_StreamsDemo {
 		// TODO Auto-generated method stub
 		List<Integer> marks = List.of(88,2,4,7,9,5,1,10,14,17,19, 7 );
 		
-		//Q. filter out even numbers and sort them in natural order.
+		//Q. filter out even numbers and sort them in natural order.  
 		List<Integer> evenNum = marks.stream()
 								.filter((e)-> e%2==0)					//filter()
 								.sorted()								//sorted
@@ -101,10 +101,10 @@ public class _05_StreamsDemo {
 		boolean isNegativeNum = numbers.stream().noneMatch(e -> e<0);	//noneMatch()
 		System.out.println("Is any negative number not present? : "+ isNegativeNum);
 		
-		Optional<Integer> max =  numbers.stream().max(Integer::compareTo);			//max()
+		Optional<Integer> max =  numbers.stream().max((a, b)-> a-b);			//max()
 		System.out.println("max element: "+ max);
 
-		Optional<Integer> min =  numbers.stream().min(Integer::compareTo);			//min()
+		Optional<Integer> min =  numbers.stream().min((a, b)-> a-b);			//min()
 		System.out.println("minelement: "+ min);
 		
 		

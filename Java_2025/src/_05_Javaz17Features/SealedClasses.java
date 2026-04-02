@@ -3,11 +3,13 @@ package _05_Javaz17Features;
 sealed class Book permits Natraj, Doms{
 	int id;
 	String bookName;
+	
 	public Book(int id, String bookName) {
 		super();
 		this.id = id;
 		this.bookName = bookName;
 	}
+	
 	@Override
 	public String toString() {
 		return "Book [id=" + id + ", bookName=" + bookName + "]";
@@ -43,6 +45,7 @@ final class Doms extends Book {
 	}
 	
 }
+
 public class SealedClasses {
 
 	public static void main(String[] args) {
