@@ -28,14 +28,14 @@ class Pentagon implements Polygon {
 class PolygonFactory {
 	public static Polygon getPolygon(int numberOfSides) {
 		switch (numberOfSides) {
-		case 3:
-			return new Triangle();
-		case 4:
-			return new Square();
-		case 5:
-			return new Pentagon();
-		default:
-			throw new IllegalArgumentException("No such polygon with " + numberOfSides + " sides.");
+			case 3:
+				return new Triangle();
+			case 4:
+				return new Square();
+			case 5:
+				return new Pentagon();
+			default:
+				throw new IllegalArgumentException("No such polygon with " + numberOfSides + " sides.");
 		}
 	}
 }

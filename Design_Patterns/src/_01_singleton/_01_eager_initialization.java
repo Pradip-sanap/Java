@@ -55,11 +55,28 @@ class DBConnection{
 	
 }
 
-enum Logger  {
-	INSTANCE;
+enum SingletonEnum {
+    INSTANCE;
+    
+    // Optional: Fields and methods can be added as needed
+    private int value;
 
-    public void log(String message) {
-        System.out.println("[LOG]: " + message);
+    // Optional: Enum constructors are implicitly private and run only once
+    SingletonEnum() {
+        System.out.println("SingletonEnum constructor called, instance created.");
+    }
+
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
+    }
+    
+    public void doSomething() {
+        // Business logic here
+        System.out.println("Singleton method called.");
     }
 }
 
@@ -71,8 +88,18 @@ public class _01_eager_initialization {
 	
 
 	public static void main(String[] args) {
-		Logger.INSTANCE.log("Application started");
-        Logger.INSTANCE.log("User logged in");
+		// Access the singleton instance
+        SingletonEnum singleton = SingletonEnum.INSTANCE;
+
+        // Call methods on the instance
+        System.out.println("Initial value: " + singleton.getValue());
+        singleton.setValue(10);
+        System.out.println("New value: " + singleton.getValue());
+        singleton.doSomething();
+
+        // Verify that it's the same instance
+        SingletonEnum anotherSingleton = SingletonEnum.INSTANCE;
+        System.out.println("Are both instances the same? " + (singleton == anotherSingleton));
 		
 	}
 
