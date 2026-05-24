@@ -14,6 +14,9 @@ final class Circle implements Shape{
 		
 	}
 }
+
+
+
 public class SealedInterface {
 
 	public static void main(String[] args) {
