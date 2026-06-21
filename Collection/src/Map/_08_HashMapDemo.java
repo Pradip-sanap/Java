@@ -3,6 +3,7 @@ package Map;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -45,13 +46,13 @@ public class _08_HashMapDemo {
 		System.out.println(allValues);
 		
 		// Iterating over key-value pairs
-//		System.out.println(stud.entrySet());
+		System.out.println(stud.entrySet());
+		stud.put(null, null); 
         for (Map.Entry<Integer, String> entry : stud.entrySet()) {
             System.out.println(entry.getKey() + " -> " + entry.getValue());
         }
         
         
-        stud.put(null, null);
         System.out.println(stud.getOrDefault(43, "Defaulteed value"));
         
         System.out.println(stud.isEmpty());
@@ -67,8 +68,8 @@ public class _08_HashMapDemo {
         
         stud.remove(1);
         stud.remove(65, "Sameer");
-        
-        Collections.sort(null, null);
+        stud.remove(55);			// key not present.
+         
         
 		
 		System.out.println(stud);

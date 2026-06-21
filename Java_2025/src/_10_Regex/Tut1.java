@@ -36,6 +36,11 @@ public class Tut1 {
 		System.out.println(mobile1.matches(regex));
 		System.out.println(mobile2.matches(regex));
 		
+		//--------------------------------
+		String mob1 = "9876543210";
+		boolean valid = Pattern.matches("\\d{10}$", mob1);
+		System.out.println(valid);
+		
 	}
 
 }
