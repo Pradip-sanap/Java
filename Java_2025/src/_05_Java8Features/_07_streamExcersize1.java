@@ -15,8 +15,7 @@ public class _07_streamExcersize1 {
 		// Q. Given a list of integers, partition them
 		// into even and odd numbers using partitioningBy()
 		List<Integer> given1 = List.of(8, 2, 5, 1, 5, 9, 11, 15, 19, 14);
-		Map<Boolean, List<Integer>> out1 = given1.stream().collect(
-								Collectors.partitioningBy(e -> e % 2 == 0));
+		Map<Boolean, List<Integer>> out1 = given1.stream().collect(Collectors.partitioningBy(e -> e % 2 == 0));
 		System.out.println(out1);
 		
 //		Partition a list of strings into:
@@ -38,7 +37,7 @@ public class _07_streamExcersize1 {
 		
 		
 		//Partition a list of integers into even and odd and count how many elements are in each partition
-		Map<Boolean, Long> countMap =
+		Map<Boolean, Long> countMap = 
                 given1.stream()
                        .collect(Collectors.partitioningBy(
                                n -> n % 2 == 0,  // true = even, false = odd
@@ -67,9 +66,9 @@ public class _07_streamExcersize1 {
                     Collectors.maxBy(Integer::compare)  // Find max in each partition
                 ));
 
-            // Print the results
-            System.out.println("Max of n > 10: " + maxByPartition.get(true).orElse(null));
-            System.out.println("Max of n <= 10: " + maxByPartition.get(false).orElse(null));
+        // Print the results
+        System.out.println("Max of n > 10: " + maxByPartition.get(true).orElse(null));
+        System.out.println("Max of n <= 10: " + maxByPartition.get(false).orElse(null));
             
             
             

@@ -114,8 +114,7 @@ public class _06_StreamsExcersice {
         //Group employees by department and collect their names
         Map<String, List<String>> ans2 = empls.stream()
 				.collect(Collectors.groupingBy(emp -> emp.department, 
-												Collectors.mapping(emp -> emp.getName(), Collectors.toList()
-												)
+												Collectors.mapping(emp -> emp.getName(), Collectors.toList())
 						));
         System.out.println(ans2);
         
@@ -175,13 +174,10 @@ public class _06_StreamsExcersice {
 		System.out.println(firstLettersByLength);
 		
 		
-		List<String> list4 = List.of("apple", "bat", "car", "door", "elephant", "frog", "ant");
+		List<String> list4 = List.of("apple", "bat", "car","arm", "door", "elephant", "frog", "ant");
 
 		Map<Integer, Map<Character, List<String>>> groupedTwoLevel = list4.stream()
-		    .collect(Collectors.groupingBy(
-		        String::length,
-		        Collectors.groupingBy(s -> s.charAt(0))
-		    ));
+		    .collect(Collectors.groupingBy(String::length,Collectors.groupingBy(s -> s.charAt(0))));
 
 		System.out.println(groupedTwoLevel);
 		
@@ -190,10 +186,7 @@ public class _06_StreamsExcersice {
 		List<String> list5 = List.of("apple", "bat", "car", "door", "elephant", "frog", "ant");
 
 		Map<Integer, Optional<String>> longestByLength = list5.stream()
-		    .collect(Collectors.groupingBy(
-		        ele -> ele.length(),
-		        Collectors.maxBy(Comparator.naturalOrder())
-		    ));
+		    .collect(Collectors.groupingBy(ele -> ele.length(), Collectors.maxBy(Comparator.naturalOrder())));
 
 		longestByLength.forEach((length, wordOpt) ->
 		    System.out.println(length + ": " + wordOpt.orElse("No words"))

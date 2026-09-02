@@ -50,10 +50,11 @@ public class _02_FunctionInterfaceDemo {
         
         
         
-//------2. Consumer<T>
-        
+//------2. Consumer<T>        
         Consumer<String> logger = msg -> System.out.println(msg);  
         logger.accept("program exacuted!!");
+        
+        
         
 //------3.Function<T, R>
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
@@ -62,6 +63,7 @@ public class _02_FunctionInterfaceDemo {
         numbers.stream()
         		.map(square)
         		.forEach(System.out::println);;
+        		
         
         		
 //------4. Supplier
@@ -69,6 +71,8 @@ public class _02_FunctionInterfaceDemo {
         Supplier<Integer> randomNum = () -> random.nextInt(100);
         
         System.out.println("Supplier : "+randomNum.get());
+        
+        
         
 //------5. BiConsumer<T t, U u>
         Map<String, Integer> scores = new HashMap<>();
@@ -102,9 +106,18 @@ public class _02_FunctionInterfaceDemo {
         System.out.println(max.apply(10, 20));  // Output: 20
         
         
-//        Comparator<Integer> c;
+        Comparator<Integer> c;
 //        Runnable r;
 //        Callable<Integer> cc;
+        
+        
+        TriConsumer<Integer, String, Character> triconsumer = (num, name, ch) -> System.out.println(num +"  "+ name+" "+ ch); 
+        triconsumer.accept(121, "sunny", 'z');
 	}
 
+}
+
+@FunctionalInterface
+interface TriConsumer<T, U, V>{
+	void accept(T t, U u, V v);
 }
