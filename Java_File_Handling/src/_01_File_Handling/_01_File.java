@@ -7,6 +7,7 @@ import java.util.Arrays;
 public class _01_File {
 
 	public static void main(String[] args) throws IOException {
+		
 		File file = new File("logs/inputsData.txt");
 		if (file.createNewFile()) {								//create a file
 		    System.out.println("File created successfully.");
@@ -45,8 +46,8 @@ public class _01_File {
 		
 		System.out.println(file.getName());
 		System.out.println(file.getParent());
-		System.out.println(file.getFreeSpace());
-		System.out.println(file.getTotalSpace());
+		System.out.println(file.getFreeSpace());		// 44052488192 ->   41 GB
+		System.out.println(file.getTotalSpace());		// 107249397760  -> 100 GB
 		System.out.println(file.getUsableSpace());
 		
 		System.out.println(file.isHidden());

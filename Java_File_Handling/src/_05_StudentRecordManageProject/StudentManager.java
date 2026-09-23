@@ -15,7 +15,7 @@ import java.util.stream.Stream;
 
 public class StudentManager {
 
-	private static final String FILEPATH = "C:\\Users\\pradips\\Music\\Java Repo\\Java_File_Handling\\src\\StudentRecordManageProject\\StudentRecords.csv";
+	private static final String FILEPATH = "C:\\Users\\pradips\\Videos\\StudentRecords.csv";
 	Path path = Paths.get(FILEPATH);
 	
 	// Ensure file exists

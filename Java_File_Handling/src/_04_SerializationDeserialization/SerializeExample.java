@@ -8,8 +8,9 @@ public class SerializeExample {
 		Employee emp = new Employee("John Doe", 30, "secret123");
 
 		try { 
-			FileOutputStream fos = new FileOutputStream("C:\\Users\\pradips\\Music\\Java Repo\\Java_File_Handling\\src\\_04_SerializationDeserialization\\employee.ser");
+			FileOutputStream fos = new FileOutputStream("C:\\Users\\pradips\\Desktop\\My Code\\Java\\Java_File_Handling\\src\\_04_SerializationDeserialization\\employee.ser");
 			ObjectOutputStream oos = new ObjectOutputStream(fos);
+		
 			oos.writeObject(emp);
 			System.out.println("Serialization completed!");
 		} catch (Exception e) {

@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 public class _03_LocalDateTime {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		LocalDateTime now = LocalDateTime.now();                             // Current date & time
 		LocalDateTime specific = LocalDateTime.of(2025, 6, 11, 14, 30);      // 2025-06-11T14:30
 		LocalDateTime parsed = LocalDateTime.parse("2025-06-11T14:30:15");   // From ISO String

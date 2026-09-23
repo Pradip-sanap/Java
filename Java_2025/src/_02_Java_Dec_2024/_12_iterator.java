@@ -20,7 +20,7 @@ public class _12_iterator {
 			Integer value = itr.next();
 			if(value==53) {
 				list.set(list.indexOf(value), value - 3);
-			}
+			} 
 			System.out.println(value);
 		}
 		

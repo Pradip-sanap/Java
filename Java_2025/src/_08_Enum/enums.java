@@ -1,5 +1,8 @@
 package _08_Enum;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 enum Days{
 	Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
 }
@@ -51,6 +54,10 @@ public class enums {
 //		System.out.println(code);
 		States var = States.MAHARASHTRA;
 		System.out.println(var);
+		
+		System.out.println(Arrays.toString(States.values()));
+		
+		
 	}
 
 }
